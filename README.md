@@ -9,8 +9,5 @@ Next.js 기반 프론트 템플릿
 - eslint + prettier
 - react query
 - recoil
-
-### 고려중
-
-- jest (테스트 코드)
-- storybook (UI 테스트)
+- (고려 중) jest 테스트 코드
+- (고려 중) storybook UI 테스트 및 컴포넌트 관리
