@@ -1,1 +1,27 @@
+# dependencies
 node_modules
+.next
+out
+.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# package-lock.json
+packag-lock.json
+yarn.lock
+
+# local env files
+.env*.local
+
+# typescript
+next-env.d.ts 
+

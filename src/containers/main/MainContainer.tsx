@@ -1,12 +1,13 @@
-import Image from 'next/image'
-import { useEffect } from 'react'
-import Script from 'next/script'
-import BootPayTest from '@/components/bootPayTest/BootPayTest'
+import Image from "next/image";
+import { useEffect } from "react";
+import Script from "next/script";
+import BootPayTest from "@/components/bootPayTest/BootPayTest";
+import SampleApi from "@/components/sampleApi/SampleApi";
 
 export default function MainContainer() {
   useEffect(() => {
-    console.log('window:::', window && window?.BootPay)
-  }, [])
+    console.log("window:::", window && window?.BootPay);
+  }, []);
   return (
     <>
       <Script
@@ -27,7 +28,8 @@ export default function MainContainer() {
           height={37}
           priority
         />
+        <SampleApi />
       </main>
     </>
-  )
+  );
 }
