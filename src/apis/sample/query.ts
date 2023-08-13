@@ -1,11 +1,17 @@
-import { useQuery } from "@tanstack/react-query";
-import { ISampleReq, ISampleRes } from "./type";
-import { getSampleApi } from "./api";
+import { useMutation, useQuery } from "@tanstack/react-query";
+import { ISampleLoginReq, ISampleReq, ISampleRes } from "./type";
+import SampleApi from "./api";
 
-export const useGetSampleApi = (params: ISampleReq) => {
+export const useGetSampleQuery = (params: ISampleReq) => {
   return useQuery<ISampleRes, Error>(
     ["SAMPLE_API", params],
-    () => getSampleApi(params),
+    () => SampleApi.getSampleApi(params),
     { enabled: !!params.id }
+  );
+};
+
+export const useGetSamleLoginMutation = () => {
+  return useMutation((params: ISampleLoginReq) =>
+    SampleApi.getSampleLoginApi(params)
   );
 };

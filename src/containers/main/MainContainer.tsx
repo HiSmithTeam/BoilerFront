@@ -2,7 +2,6 @@ import Image from "next/image";
 import { useEffect } from "react";
 import Script from "next/script";
 import BootPayTest from "@/components/bootPayTest/BootPayTest";
-import SampleApi from "@/components/sampleApi/SampleApi";
 
 export default function MainContainer() {
   useEffect(() => {
@@ -16,19 +15,24 @@ export default function MainContainer() {
         strategy="beforeInteractive"
       ></Script>
       <main>
-        <div>
-          <BootPayTest />
+        <div className="content-wrap">
+          <div className="content">
+            <BootPayTest />
+          </div>
         </div>
-        ~~~이미지
-        <Image
-          src="/assets/next.svg"
-          //   src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <SampleApi />
+        <div className="content-wrap">
+          <div className="content">
+            {" "}
+            <Image
+              src="/assets/next.svg"
+              //   src="/next.svg"
+              alt="Next.js Logo"
+              width={180}
+              height={37}
+              priority
+            />
+          </div>
+        </div>
       </main>
     </>
   );

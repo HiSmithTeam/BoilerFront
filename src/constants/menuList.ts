@@ -21,6 +21,10 @@ const headerMenu = [
     label: "Sample/seo",
     path: PATHNAME.SAMPLE_SEO,
   },
+  {
+    label: "Sample/api",
+    path: PATHNAME.SAMPLE_API,
+  },
 ];
 
 // const lnbMenu: Record<keyof typeof PATHNAME, > = {};
