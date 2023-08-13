@@ -1,0 +1,25 @@
+.content-wrap {
+  width: 100%;
+  background: gray;
+
+  margin-bottom: 30px;
+
+  .content {
+    margin: auto;
+    max-width: 1200px;
+    background: #fafaac;
+    padding: 20px 0;
+  }
+}
+
+@media (min-width: 370px) and (max-width: 719px) {
+}
+@media (min-width: 720px) and (max-width: 1199px) {
+  .content-wrap {
+    .content {
+      padding: 20 20px;
+    }
+  }
+}
+@media (min-width: 1200px) {
+}
