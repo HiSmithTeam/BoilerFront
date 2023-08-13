@@ -77,8 +77,7 @@ const Header = () => {
       <div className="header-mobile">
         <img
           className="header-logo"
-          // src="http://placehold.it/320x100?text=sample"
-          src="https://krta.or.kr/new/images/logo.jpg"
+          src="http://placehold.it/320x50?text=sample"
           alt="logo"
           onClick={() => handleMenuClick("/")}
         />
