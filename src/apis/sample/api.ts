@@ -13,7 +13,7 @@ const SampleApi: ISampleApi = {
     try {
       const response: ISampleRes = { data: { name: "Test Name" } };
 
-      return wait(2000).then(() => {
+      return wait(3000).then(() => {
         return response;
       });
     } catch (e: any) {

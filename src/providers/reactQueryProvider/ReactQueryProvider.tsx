@@ -1,5 +1,5 @@
-import { IProps } from '@/types/global'
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { IProps } from "@/types/global";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -10,22 +10,22 @@ const queryClient = new QueryClient({
       retryDelay: 100, // 쿼리 재시도 요청시간
       onError: (error: any) => {
         // queries 에러
-        console.log(':::react Query quries onError:::', error)
+        console.log(":::react Query quries onError:::", error);
       },
     },
     mutations: {
       onError: (error: any) => {
         // queries 에러
-        console.log(':::react Query mutations onError:::', error)
+        console.log(":::react Query mutations onError:::", error);
       },
     },
   },
-})
+});
 
 const ReactQueryProvider = ({ children }: IProps) => {
   return (
     <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
-  )
-}
+  );
+};
 
-export default ReactQueryProvider
+export default ReactQueryProvider;
