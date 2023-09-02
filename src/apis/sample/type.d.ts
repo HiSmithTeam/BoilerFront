@@ -24,7 +24,34 @@ export interface ISampleLoginRes {
   // result: "string";
 }
 
+// member
+export interface IgetMemberInfoRes {
+  createDate: string;
+  modifiedDate: string;
+  id: number;
+  memberId: string;
+  memberPw: string;
+  memberIdImageUrl: string;
+  nickname: string;
+  name: string;
+  gender: string;
+  introduce: string;
+  birth: string;
+  phone: string;
+  address: string;
+  email: string;
+  authCode: string;
+  snsCode: string;
+  status: string;
+  memo: string;
+}
+
+export interface IgetMemberInfoReq {
+  memberId: string;
+}
+
 export interface ISampleApi {
   getSampleApi(param: ISampleReq): Promise<ISampleRes>;
   getSampleLoginApi(param: ISampleLoginReq): Promise<ISampleLoginRes>;
+  getMemberInfo(param: IgetMemberInfoReq): Promise<IgetMemberInfoRes>;
 }

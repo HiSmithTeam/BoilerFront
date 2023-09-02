@@ -1,6 +1,11 @@
 import { useMutation, useQuery } from "@tanstack/react-query";
-import { ISampleLoginReq, ISampleReq, ISampleRes } from "./type";
-import SampleApi from "./api";
+import {
+  ISampleLoginReq,
+  ISampleReq,
+  ISampleRes,
+  IgetMemberInfoReq,
+} from "@/apis/sample/type";
+import SampleApi from "@/apis/sample/api";
 
 export const useGetSampleQuery = (params: ISampleReq) => {
   return useQuery<ISampleRes, Error>(
@@ -13,5 +18,11 @@ export const useGetSampleQuery = (params: ISampleReq) => {
 export const useGetSamleLoginMutation = () => {
   return useMutation((params: ISampleLoginReq) =>
     SampleApi.getSampleLoginApi(params)
+  );
+};
+
+export const useGetMemberInfoMutation = () => {
+  return useMutation((params: IgetMemberInfoReq) =>
+    SampleApi.getMemberInfo(params)
   );
 };

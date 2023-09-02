@@ -5,7 +5,9 @@ import {
   ISampleApi,
   ISampleLoginReq,
   ISampleLoginRes,
-} from "./type";
+  IgetMemberInfoReq,
+  IgetMemberInfoRes,
+} from "@/apis/sample/type";
 import { wait } from "@/utils/common";
 
 const SampleApi: ISampleApi = {
@@ -28,6 +30,20 @@ const SampleApi: ISampleApi = {
         .get("/user", {
           params: params,
         })
+        .then((res) => res);
+
+      return response?.data || null;
+    } catch (e: any) {
+      throw e;
+    }
+  },
+  getMemberInfo: async (
+    params: IgetMemberInfoReq
+  ): Promise<IgetMemberInfoRes> => {
+    const { memberId } = params;
+    try {
+      const response = await axiosInstance
+        .get(`/member/${memberId}`)
         .then((res) => res);
 
       return response?.data || null;
