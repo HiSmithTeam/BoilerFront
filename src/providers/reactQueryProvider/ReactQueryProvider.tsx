@@ -26,11 +26,11 @@ const queryClient = new QueryClient({
       retry: 3, // 기본값 3, 쿼리 요청 실패시 재시도 횟수
       retryDelay: 100, // 쿼리 재시도 요청시간
 
-      onError: onErrorHandler, // Queries 에러 로그
+      onError: onErrorHandler,
       useErrorBoundary: useErrorBoundary,
     },
     mutations: {
-      onError: onErrorHandler, // Queries 에러 로그
+      onError: onErrorHandler,
       useErrorBoundary: useErrorBoundary,
     },
   },

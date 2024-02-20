@@ -1,3 +1,5 @@
+import style from "./Error.style";
+
 interface IProps {
   status?: string;
   onReset: () => void;
@@ -9,7 +11,7 @@ const Error = ({ status, onReset }: IProps) => {
   };
 
   return (
-    <div>
+    <div css={style}>
       <h1>ERROR 발생</h1>
       <h3>error code : {status}</h3>
       <button onClick={onClickReset}>reset</button>
