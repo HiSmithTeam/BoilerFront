@@ -4,17 +4,13 @@ import Provider from "@/providers";
 import "@/styles/global.scss";
 import "@/styles/service.scss";
 import MetaHead from "@/components/seo/metaHead/MetaHead";
-import { ErrorBoundary, FallbackProps } from "react-error-boundary";
+import ErrorBoundaryProvider from "@/providers/errorBoundary/ErrorBoundaryProvider";
 
 const app = ({ Component, pageProps }: AppProps) => {
   // TODO: SUSPENSE 도입여부
   return (
     <Provider>
-      <ErrorBoundary
-        fallbackRender={(props: FallbackProps) => {
-          return <>ERROR - {JSON.stringify(props.error)}</>;
-        }}
-      >
+      <ErrorBoundaryProvider>
         <LayoutContainer>
           <MetaHead
             title="BoilerFront"
@@ -23,7 +19,7 @@ const app = ({ Component, pageProps }: AppProps) => {
           />
           <Component {...pageProps} />
         </LayoutContainer>
-      </ErrorBoundary>
+      </ErrorBoundaryProvider>
     </Provider>
   );
 };
